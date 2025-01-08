@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="C:\frontend practice\projects\portfolio2\projects\calculatorapp\calculator-styles.css">
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1>CALCULATOR</h1>
+        <div class="results">
+            <!--after equal operator used result-->
+            <div class="final-result">
+                <input type="text" autofocus>
+            </div>
+             <!--before equal operator used result-->
+            <div class="pre-result">
+                <input type="text" name="" id="" readonly>
+            </div>
+        </div>
+        <div class="backspace">
+            <div class="backspace">
+                <button  data-value="backspace" id="icon">✖</button>
+            </div>
+            
+        </div>
+
+        <div class="row" id="row1">
+            <button  id="clear" data-value="clear">C</button>
+            <button data-value="()">()</button>
+            <button data-value="%">%</button>
+            <button data-value="/">/</button>
+        </div>
+        
+        <div class="row" id="row2">
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button data-value="*">*</button>
+        </div>
+
+        <div class="row" id="row3">
+            <button data-value="4">4</button>
+            <button  data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button data-value="-">-</button>
+        </div>
+
+        <div class="row" id="row4">
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button data-value="+">+</button>
+        </div>
+
+        <div class="row" id="row5">
+            <button data-value="+/-">+/-</button>
+            <button data-value="0">0</button>
+            <button data-value=".">.</button>
+            <button data-value="=">=</button>
+        </div>
+    
+        
+    </div>
+
+    <script src="C:\frontend practice\projects\portfolio2\projects\calculatorapp\calculator-script.js"></script>
+</body>
+</html>

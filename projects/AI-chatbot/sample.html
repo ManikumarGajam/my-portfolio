@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+
+  <style>
+    #chatbot-toggler {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  border: none;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #5350c4;
+  transition: all 0.2s ease;
+}
+
+#chatbot-toggler span {
+  color: #fff;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+
+/* Initial state: Only show the mode_comment icon */
+#chatbot-open {
+  opacity: 1;
+}
+
+#chatbot-close {
+  opacity: 0;
+}
+
+/* Rotate button when toggling (optional) */
+.show-chatbot #chatbot-toggler {
+  transform: rotate(90deg);
+}
+
+  </style>
+</head>
+<body>
+  <button id="chatbot-toggler">
+    <span class="material-symbols-rounded" id="chatbot-open">mode_comment</span>
+    <span class="material-symbols-rounded" id="chatbot-close">close</span>
+  </button>
+  
+  <script>
+const chatbotToggler = document.querySelector("#chatbot-toggler");
+
+// Toggle the class to show/hide the chatbot and update icon visibility
+chatbotToggler.addEventListener("click", () => {
+  document.body.classList.toggle("show-chatbot");
+
+  // Toggle visibility of icons
+  const openIcon = document.querySelector("#chatbot-open");
+  const closeIcon = document.querySelector("#chatbot-close");
+
+  if (document.body.classList.contains("show-chatbot")) {
+    openIcon.style.opacity = "0"; // Hide the mode_comment icon
+    closeIcon.style.opacity = "1"; // Show the close icon
+  } else {
+    openIcon.style.opacity = "1"; // Show the mode_comment icon
+    closeIcon.style.opacity = "0"; // Hide the close icon
+  }
+});
+
+
+  </script>
+</body>
+</html>
+
+
+
+const closeChatbot=document.querySelector("#close-chatbot");

@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;  /* Stack the heading and container vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(14, 17, 65);
+    color: #333;
+}
+
+/* Title Styling */
+
+h1{
+    margin-bottom: 30px;
+    color: #f9f9f9;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #221f3c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    border: 1px solid white;
+}
+
+/* Results Section */
+.results {
+    width: 100%;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 1.5px solid #ddd;
+   
+    border-radius: 5px;
+}
+
+.results input {
+    width: 100%;
+    height: 50px;
+   
+    text-align: right;
+    border: none;
+    
+    outline: none;
+    padding: 5px;
+    
+    
+    margin-bottom: 10px;
+}
+.results .pre-result input{
+    font-size: 1.1rem;
+}
+.results .final-result input{
+    font-size: 1.9rem;
+}
+
+/* Buttons Layout */
+.row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    background: transparent;
+    flex: 1;
+    margin: 5px;
+    height: 50px;
+    font-size: 1.1em;
+    color: #fff;
+    
+    
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background:  #6c6b71;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button#clear {
+    background: #dc3545;
+}
+
+button#clear:hover {
+    background: #b02a37;
+}
+
+button#icon {
+    padding: 5px 22px;
+    background: transparent;
+}
+
+button#icon:hover {
+    background: #5a6268;
+}
+
+/* Backspace Button */
+.backspace {
+    margin-bottom: 10px;
+    text-align: right;
+    width: 100%;
+    background-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    button {
+        font-size: 1em;
+        height: 45px;
+    }
+
+    .results input {
+        font-size: 1em;
+    }
+}
