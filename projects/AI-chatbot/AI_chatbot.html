@@ -8,11 +8,86 @@
     
 
     <link rel="stylesheet" href="C:\frontend practice\projects\portfolio2\projects\AI-chatbot\chatbot_style.css">
+    <style>
+       .container {
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ai-head {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: white;
+  -webkit-text-fill-color: white; /* No fill color */
+    -webkit-text-stroke: 2px #4caf50;
+  margin-bottom: 65px;
+  
+}
+
+.img {
+  width: 60%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  
+  box-shadow: 0 0 15px rgb(82, 240, 248),
+        0 0 25px rgb(71, 244, 253),
+        0 0 35px rgb(75, 222, 245);
+        animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-1.3rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.content {
+  font-size: 1rem;
+  color: white;
+  margin-top: 40px;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .ai-head {
+    font-size: 1.7rem;
+  }
+
+  .img {
+    width: 70%;
+  }
+
+  .content {
+    font-size: 1rem;
+  }
+}
+
+  
+    </style>
    
 </head>
 <body>
-    <button id="chatbot-toggler">
-        <span class="material-symbols-rounded" id="chatbot-open">mode_comment</span>
+    <div class="container">
+        <h1 class="ai-head">AI CHATBOT</h1>
+        <img class="img" src="https://b2001778.smushcdn.com/2001778/wp-content/uploads/2023/02/chatgpt-human-e1677590834837.jpg?lossy=0&strip=1&webp=1">
+        <div class="content">To open AI chatbot, please click on the below right-side icon.</div>
+      </div>
+    <button id="chatbot-toggler">        <span class="material-symbols-rounded" id="chatbot-open">mode_comment</span>
         <span class="material-symbols-rounded" id="chatbot-close">close</span> <!--external close chatbot-->
     </button>
 

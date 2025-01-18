@@ -19,22 +19,23 @@
         <i class='bx bx-menu' id="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" class="menu-item" >Home</a>
+            <a href="#about" class="menu-item">About</a>
+            <a href="#skills" class="menu-item">Skills</a>
+            <a href="#education" class="menu-item">Education</a>
+            <a href="#projects" class="menu-item">Projects</a>
+            <a href="#services" class="menu-item">Services</a>
+            <a href="#contact" class="menu-item">Contact</a>
         </nav>
     </header>
 
     <!--Home section code-->
 
     <section class="home" id="home">
-        <div class="home-img">
-            <img src="C:\frontend practice\projects\portfolio2\asssets\image_part_001.jpg"
-                alt="Profile Image">
+        <div class="home-img" >
+            <div class="rotating-border"><img src="C:\frontend practice\projects\portfolio2\asssets\image_part_001.jpg"
+                alt="Profile Image"></div>
+            
         </div>
         <div class="home-content">
             <h3>Hello, Myself</h3>
@@ -75,7 +76,7 @@
     <!--skills section code-->
 
     <section class="skills" id="skills">
-        <h2 class="heading"><img src="C:\frontend practice\projects\portfolio2\asssets\skills.jpeg" alt="logo">My <span>Skills</span></h2>
+        <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-box">
             <div class="languages">
                 <h3>Programming Languages</h3>
@@ -83,7 +84,7 @@
                     <ul>
                         <li><img src="C:\frontend practice\projects\portfolio2\asssets\clogo.jpeg" alt="C logo" ></li>
                         <li><img src="C:\frontend practice\projects\portfolio2\asssets\java.jpeg" alt="java logo"></li>
-                        <li><img src="C:\frontend practice\projects\portfolio2\asssets\Python_(programming_language)-Logo.wine.png" alt="python logo"></li>
+                        <li class="python"><img src="https://jelastic.com/blog/wp-content/uploads/2014/08/Python_logo-large.png" alt="python logo"></li>
                     </ul>
                 </div>
             </div>
@@ -91,10 +92,10 @@
                 <h3>FrontEnd Development</h3>
                 <div class="list">
                     <ul>
-                        <li><img src="C:\frontend practice\projects\portfolio2\asssets\html.jpeg" alt="html logo" class="html"></li>
-                        <li><img src="C:\frontend practice\projects\portfolio2\asssets\css.jpeg" alt="css logo" class="css"></li>
-                        <li><img src="C:\frontend practice\projects\portfolio2\asssets\javascript.jpeg" alt="js logo" class="js"></li>
-                        <li><img src="C:\frontend practice\projects\portfolio2\asssets\bootstrap.png" alt="bootstrap logo"></li>
+                        <li><img src="https://tse4.mm.bing.net/th?id=OIP.RDVABSEyarIyLcwMx5CWsQHaCd&pid=Api&P=0&h=220" alt="html logo" class="html"></li>
+                        <li><img src="https://tse2.mm.bing.net/th?id=OIP.ZDHuUOW43OxLT3B4caU6wQHaDt&pid=Api&P=0&h=220" alt="css logo" class="css"></li>
+                        <li><img src="https://tse2.mm.bing.net/th?id=OIP.ZZaV8f0-sI1l6dcdApuE6gHaEK&pid=Api&P=0&h=220" class="js"></li>
+                        <li><img src="https://tse3.mm.bing.net/th?id=OIP.zQk-YiH7bxDU7docR_RtswHaEK&pid=Api&P=0&h=220" alt="bootstrap logo"></li>
                         <li><img src="C:\frontend practice\projects\portfolio2\asssets\react.jpeg" alt="react logo"></li>
                     </ul>
                 </div>
@@ -103,7 +104,7 @@
                 <h3>BackEnd Development</h3>
                 <div class="list">
                     <ul>
-                        <li><img src="C:\frontend practice\projects\portfolio2\asssets\nodejs.png" alt="node js"></li>
+                        <li class="nodejs"><img src="C:\frontend practice\projects\portfolio2\asssets\nodejs.png" alt="node js"></li>
                     </ul>
                 </div>
             </div>
@@ -263,6 +264,34 @@
     </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="C:\frontend practice\projects\portfolio2\portfolio_script.js"></script>
+    <!-- JavaScript to handle active class -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+
+      function removeActiveClasses() {
+        navLinks.forEach(link => link.classList.remove('active'));
+      }
+
+      function addActiveClass() {
+        let scrollPosition = window.scrollY + 100; // Adjust to start before section's position
+
+        sections.forEach((section, index) => {
+          if (
+            scrollPosition >= section.offsetTop &&
+            scrollPosition < section.offsetTop + section.offsetHeight
+          ) {
+            removeActiveClasses();
+            navLinks[index].classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', addActiveClass);
+      addActiveClass(); // To set the initial active link
+    });
+  </script>
 
 
 </body>
