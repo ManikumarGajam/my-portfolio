@@ -1140,3 +1140,15 @@ color: black;
         border-bottom: 10px solid var(--primary-color);
     }
 }
+
+/* */
+/* Thank You Message */
+#thankYouMessage {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: #e0ffe0;
+    color: #333;
+    border-radius: 4px;
+    margin-top: 20px;
+}
