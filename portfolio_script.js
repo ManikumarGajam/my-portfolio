@@ -33,3 +33,15 @@ const typed = new Typed('.multiple-text', {
     // Opens the CV page in a new tab/window
     window.open("asssets/Gajam-Manikumar-FlowCV-Resume-20250107.pdf");
 }
+
+function showThankYouMessage(event) {
+    event.preventDefault();  // Prevent the form from actually submitting
+
+    // Display the thank you message
+    const thankYouMsg = document.getElementById('thankYouMessage');
+    thankYouMsg.style.display = 'block';  // Show the thank you message
+
+    // Optionally, you can clear the form fields here
+    const form = event.target;
+    form.reset();
+}
